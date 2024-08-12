@@ -27,6 +27,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/draft': RouteRecordInfo<'/posts/draft', '/posts/draft', Record<never, never>, Record<never, never>>,
     '/posts/hello-valaxy': RouteRecordInfo<'/posts/hello-valaxy', '/posts/hello-valaxy', Record<never, never>, Record<never, never>>,
     '/posts/i18n': RouteRecordInfo<'/posts/i18n', '/posts/i18n', Record<never, never>, Record<never, never>>,
+    '/posts/markdown-style-guide': RouteRecordInfo<'/posts/markdown-style-guide', '/posts/markdown-style-guide', Record<never, never>, Record<never, never>>,
     '/posts/test': RouteRecordInfo<'/posts/test', '/posts/test', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
   }

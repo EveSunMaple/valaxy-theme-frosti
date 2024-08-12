@@ -1,2 +1,279 @@
 @use './layout' as *;
 @use './markdown' as *;
+@use './astro' as *;
+@use './waline' as *;
+@use './katex' as *;
+
+html {
+  scroll-behavior: smooth;
+  transition: all;
+}
+
+.no-card {
+  border-radius: var(--rounded-box, 1rem);
+}
+
+.link-card a,
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+.main-card img {
+  border-radius: 1rem;
+}
+
+.main-card p a,
+.main-card li a {
+  text-decoration: underline;
+}
+
+.main-card p a:hover,
+.main-card li a:hover {
+  color: oklch(var(--p));
+}
+
+.alert,
+.collapse,
+.diff {
+  margin: 0.5rem 0;
+}
+
+html[data-theme='dracula'] {
+  --pagefind-ui-primary: oklch(var(--nc));
+  --pagefind-ui-text: oklch(var(--nc));
+  --pagefind-ui-background: oklch(var(--b1));
+  --pagefind-ui-border: oklch(var(--n));
+  --pagefind-ui-tag: oklch(var(--b1));
+
+  .highlight,
+  .frosti-code,
+  .frosti-code span {
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+
+  .highlight-tools {
+    background-color: oklch(var(--n)) !important;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-size: 100% 600px;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  background-image: url('your-image-path');
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+@font-face {
+  font-family: 'Cascadia';
+  src: url('/fonts/CascadiaCode.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+ol {
+  padding-left: 40px;
+  list-style-type: decimal;
+}
+
+ul {
+  padding-left: 40px;
+  list-style-type: disc;
+}
+
+li::marker,
+.toc-number {
+  color: oklch(var(--a));
+}
+
+thead {
+  color: oklch(var(--s));
+}
+
+textarea,
+input {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5rem 0;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.25;
+  margin-top: 1.75rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.375;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-top: 1.25rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.75;
+  margin-top: 1rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  margin-top: 0.75rem;
+}
+
+strong,
+b {
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+em {
+  margin: 0.5rem 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  table-layout: fixed;
+}
+
+table tr {
+  height: 2.5rem;
+  border: 1px solid;
+  border-color: oklch(var(--nc));
+}
+
+code {
+  font-family: 'Cascadia';
+  font-size: 1.25rem;
+  padding: 2px 5px;
+  border-radius: 0.125rem;
+}
+
+pre {
+  font-family: 'Cascadia';
+  padding: 10px;
+}
+
+blockquote {
+  margin: 0.5rem 0;
+}
+
+pre > code {
+  all: unset;
+}
+
+hr {
+  margin: 0.5rem 0;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+thead th {
+  border-bottom: 3px solid oklch(var(--bc) / 0.25);
+}
+
+.card figure {
+  display: block;
+  position: relative;
+}
+
+.frosti-code,
+.frosti-code span {
+  font-size: 0.875rem;
+  background-color: oklch(var(--b2));
+}
+
+.highlight {
+  position: relative;
+  border-radius: var(--rounded-box, 1rem);
+  overflow: hidden;
+  margin: 0.5rem 0;
+  background-color: oklch(var(--b2));
+}
+
+.highlight-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: oklch(var(--nc));
+}
+
+.highlight-code {
+  display: flex;
+}
+
+.highlight-code .code {
+  flex: auto;
+  overflow: auto;
+  padding-right: 4em;
+}
+
+.highlight-code .gutter {
+  flex: none;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid #888;
+}
+
+.highlight .code-lang {
+  font-family: 'Cascadia';
+  user-select: none;
+}
+
+.menu-item summary::after {
+  position: absolute;
+}
+
+.main-card p,
+.main-card ol,
+.main-card ul,
+.main-card li,
+.timeline-box {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.timeline {
+  padding-left: 0;
+}
+
+.timeline li {
+  margin: 0;
+  line-height: 1;
+}
+
+.footnotes {
+  margin: 0.5rem 0;
+}

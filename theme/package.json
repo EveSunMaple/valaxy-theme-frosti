@@ -1,30 +1,31 @@
 {
-  "name": "valaxy-theme-starter",
-  "version": "0.3.1",
+  "name": "valaxy-theme-frosti",
+  "version": "0.0.1",
   "packageManager": "pnpm@9.5.0",
   "author": {
-    "email": "me@yunyoujun.cn",
-    "name": "YunYouJun",
-    "url": "https://www.yunyoujun.cn"
+    "email": "contact.evesunmaple@outlook.com",
+    "name": "EveSunMaple",
+    "url": "https://frosti.vercel.app/"
   },
-  "homepage": "https://starter.valaxy.site",
+  "homepage": "https://github.com/EveSunMaple/valaxy-theme-frosti",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YunYouJun/valaxy-theme-starter"
+    "url": "https://github.com/EveSunMaple/valaxy-theme-frosti"
   },
   "keywords": [
     "valaxy",
     "theme",
-    "starter",
+    "frosti",
     "vue"
   ],
   "main": "client/index.ts",
   "types": "types/index.d.ts",
   "dependencies": {
     "@iconify-json/ant-design": "^1.1.16",
-    "@iconify-json/simple-icons": "^1.1.109"
+    "@iconify-json/simple-icons": "^1.1.109",
+    "@iconify-json/solar": "^1.1.10"
   },
   "devDependencies": {
-    "valaxy": "^0.19.1"
+    "valaxy": "^0.19.7"
   }
 }
