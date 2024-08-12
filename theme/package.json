@@ -3,19 +3,19 @@
   "version": "0.0.1",
   "packageManager": "pnpm@9.5.0",
   "author": {
-    "email": "me@yunyoujun.cn",
-    "name": "YunYouJun",
-    "url": "https://www.yunyoujun.cn"
+    "email": "contact.evesunmaple@outlook.com",
+    "name": "EveSunMaple",
+    "url": "https://frosti.vercel.app/"
   },
-  "homepage": "https://starter.valaxy.site",
+  "homepage": "https://github.com/EveSunMaple/valaxy-theme-frosti",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YunYouJun/valaxy-theme-starter"
+    "url": "https://github.com/EveSunMaple/valaxy-theme-frosti"
   },
   "keywords": [
     "valaxy",
     "theme",
-    "starter",
+    "frosti",
     "vue"
   ],
   "main": "client/index.ts",

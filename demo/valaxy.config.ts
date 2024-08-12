@@ -6,7 +6,7 @@ import type { ThemeConfig } from 'valaxy-theme-frosti'
  * do not use export const config to avoid defu conflict
  */
 export default defineConfig<ThemeConfig>({
-  theme: 'starter',
+  theme: 'frosti',
 
   themeConfig: {
     menuItems: [
