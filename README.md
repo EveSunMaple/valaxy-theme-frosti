@@ -1,9 +1,9 @@
 <p align="center">
-Valaxy-Theme-Starter<sup><em>(vue)</em></sup>
+valaxy-theme-frosti<sup><em>(vue)</em></sup>
 </p>
 
-[![npm](https://img.shields.io/npm/v/valaxy-theme-starter)](https://www.npmjs.com/package/valaxy-theme-starter)
-[![npm dev dependency version](https://img.shields.io/npm/dependency-version/valaxy-theme-starter/dev/valaxy)](https://github.com/YunYouJun/valaxy)
+[![npm](https://img.shields.io/npm/v/valaxy-theme-frosti)](https://www.npmjs.com/package/valaxy-theme-frosti)
+[![npm dev dependency version](https://img.shields.io/npm/dependency-version/valaxy-theme-frosti/dev/valaxy)](https://github.com/YunYouJun/valaxy)
 
 > This is a template for creating a [valaxy](https://github.com/YunYouJun/valaxy) theme.
 
@@ -14,7 +14,7 @@ Valaxy-Theme-Starter<sup><em>(vue)</em></sup>
 > Use [pnpm](https://pnpm.io/), because we need its workspace.
 
 ```bash
-npx degit YunYouJun/valaxy-theme-starter valaxy-theme-name
+npx degit YunYouJun/valaxy-theme-frosti valaxy-theme-name
 
 cd valaxy-theme-name
 
@@ -68,14 +68,14 @@ npm run release
 
 - [ ] Change the author name in `LICENSE` & `package.json` & `.github`
 - [ ] Write `ThemeConfig` & Other init content
-- [ ] Rename `valaxy-theme-starter` to `valaxy-theme-<name>` (custom it)
+- [ ] Rename `valaxy-theme-frosti` to `valaxy-theme-<name>` (custom it)
 - [ ] Change `theme: 'starter'` to `theme: <name>` in `valaxy.config.ts`
 - [ ] Each of your Vue components should have a namespace
   - For example: `YunTest.vue` for `valaxy-theme-yun`
 
 ### About Checklist Rename
 
-Rename `valaxy-theme-starter` with `valaxy-theme-name` in the `package.json` and `valaxy.config.ts` files.
+Rename `valaxy-theme-frosti` with `valaxy-theme-name` in the `package.json` and `valaxy.config.ts` files.
 
 PS: there are a total of four files that need to be rename
 
