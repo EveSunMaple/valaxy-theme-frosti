@@ -9,8 +9,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "^0.19.2",
-    "valaxy-theme-starter": "workspace:*"
+    "valaxy": "^0.19.7",
+    "valaxy-theme-frosti": "workspace:*"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

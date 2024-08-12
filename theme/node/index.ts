@@ -14,6 +14,30 @@ export const defaultThemeConfig: ThemeConfig = {
     primary: '#0078E7',
   },
 
+  theme: {
+    light: 'winter',
+    dark: 'winter',
+  },
+
+  dateFormat: 'ddd MMM DD YYYY',
+
+  infoTest: {
+    tag: 'Tag: ',
+    noTag: 'untagged',
+    tagCard: 'Tags',
+    tagPage: 'Tag - ',
+    noCategory: 'uncategorized',
+    categoryCard: 'Categories',
+    categoryPage: 'Category - ',
+    link: 'Link: ',
+    prevPage: 'Recent posts',
+    nextPage: 'Older posts',
+  },
+
+  menuItems: [],
+
+  socialIcons: [],
+
   footer: {
     since: 2022,
     icon: {
@@ -32,7 +56,6 @@ export const defaultThemeConfig: ThemeConfig = {
     },
   },
 
-  nav: [],
 }
 
 // write a vite plugin
@@ -69,6 +92,16 @@ export function generateSafelist(themeConfig: ThemeConfig) {
   const footerIcon = themeConfig.footer?.icon?.name
   if (footerIcon)
     safelist.push(footerIcon)
+
+  themeConfig.menuItems?.forEach((menuItems) => {
+    if (typeof menuItems !== 'string' && menuItems.icon)
+      safelist.push(menuItems.icon)
+  })
+
+  themeConfig.socialIcons?.forEach((socialIcons) => {
+    if (typeof socialIcons !== 'string' && socialIcons.icon)
+      safelist.push(socialIcons.icon)
+  })
 
   return safelist
 }

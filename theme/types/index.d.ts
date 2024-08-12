@@ -9,6 +9,36 @@ export namespace StarterTheme {
  * Theme Config
  */
 export interface ThemeConfig extends DefaultTheme.Config {
+  theme: {
+    light: 'dracula' | 'winter'
+    dark: 'dracula' | 'winter'
+  }
+
+  dateFormat: string
+
+  infoTest: {
+    tag: string
+    noTag: string
+    tagCard: string
+    tagPage: string
+    noCategory: string
+    categoryCard: string
+    categoryPage: string
+    link: string
+    prevPage: string
+    nextPage: string
+  }
+
+  /**
+   * Menu items for navigation
+   */
+  menuItems: MenuItem[]
+
+  /**
+   * Social media and contact icons
+   */
+  socialIcons: SocialIcon[]
+
   colors: {
     /**
      * primary color
@@ -59,17 +89,22 @@ export interface ThemeConfig extends DefaultTheme.Config {
       icp: string
     }
   }>
-
-  /**
-   * navbar
-   */
-  nav: NavItem[]
 }
 
-export interface NavItem {
+export interface MenuItem {
+  id: string
   text: string
-  link: string
+  href: string
   icon?: string
+  target: '_self' | '_blank'
+  subItems?: MenuItem[]
+}
+
+export interface SocialIcon {
+  href: string
+  ariaLabel: string
+  title: string
+  icon: string
 }
 
 export type ThemeUserConfig = Partial<ThemeConfig>

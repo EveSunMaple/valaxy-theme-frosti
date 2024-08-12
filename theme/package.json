@@ -1,6 +1,6 @@
 {
-  "name": "valaxy-theme-starter",
-  "version": "0.3.1",
+  "name": "valaxy-theme-frosti",
+  "version": "0.0.1",
   "packageManager": "pnpm@9.5.0",
   "author": {
     "email": "me@yunyoujun.cn",
@@ -22,9 +22,10 @@
   "types": "types/index.d.ts",
   "dependencies": {
     "@iconify-json/ant-design": "^1.1.16",
-    "@iconify-json/simple-icons": "^1.1.109"
+    "@iconify-json/simple-icons": "^1.1.109",
+    "@iconify-json/solar": "^1.1.10"
   },
   "devDependencies": {
-    "valaxy": "^0.19.1"
+    "valaxy": "^0.19.7"
   }
 }
